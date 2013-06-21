@@ -1,0 +1,26 @@
+<h1>Notifications</h1>
+<br><br>
+<div class="alert">
+	TODO: Make this functional
+</div>
+<br>
+<div id ="note1">
+	<a href="#">bob@bobthebuilder.com</a> has requested to follow you on <a href="#">Member Receipts</a>
+	<button class="btn btn-mini btn-success" id="bnote1">Acknowledge</button><br><br>
+</div>
+<div id ="note2">
+	<a href="#">ashketchum@pokemon.com</a> has requested to follow you on <a href="#">PT Sales (CAREweb.NET)</a>
+	<button class="btn btn-mini btn-success" id="bnote2">Acknowledge</button><br><br>
+</div>
+
+
+<script>
+	$("#bnote1").click(function(event){
+		event.preventDefault();
+		$("#note1").hide();
+	});
+	$("#bnote2").click(function(event){
+		event.preventDefault();
+		$("#note2").hide();
+	});
+</script>

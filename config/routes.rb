@@ -8,6 +8,8 @@ BusCalculator::Application.routes.draw do
   end
   root to: 'users#show'
 
+  match '/notifications', to: 'home#notifications'
+
   devise_for :specialties
   devise_for :items
   devise_for :users

@@ -1,6 +1,4 @@
 class SpecialtiesController < ApplicationController
-  belongs_to :users
-  belongs_to :items
   # GET /specialties
   # GET /specialties.json
   def index

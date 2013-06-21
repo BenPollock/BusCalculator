@@ -2,8 +2,15 @@
 <p>Email: <%= @user.email if @user.email %></p>
 
 <h4>Specialties</h4>
-<% @items.each do |item| %>
-    <li>
-      <%= item.name %>
-    </li>
-<% end %>
+<table class="table">
+	<tr>
+	<th>Project</th>
+	<th>Request to follow</th>
+	</tr>
+	<% @items.each do |item| %>
+		<tr>
+	      <td><%= item.name %></td>
+	      <td><button class="btn btn-primary">Request</button></td>
+	    </tr>
+	<% end %>
+<table>

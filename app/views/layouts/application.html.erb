@@ -27,8 +27,8 @@
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/users">Users</a></li>
           <li><a href="/items">Projects</a></li>
-          <li><a href="#">Notifications</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="/notifications">Notifications</a></li>
+          <li class="disabled"><a href="#">About</a></li>
           <% if user_signed_in? %>
 		    <li>
 		    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
