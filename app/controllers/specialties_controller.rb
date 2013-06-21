@@ -1,4 +1,6 @@
 class SpecialtiesController < ApplicationController
+  belongs_to :users
+  belongs_to :items
   # GET /specialties
   # GET /specialties.json
   def index
@@ -80,4 +82,5 @@ class SpecialtiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

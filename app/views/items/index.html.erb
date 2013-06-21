@@ -1,13 +1,16 @@
-<h1>Listing items</h1>
+<h1>Projects</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Description</th>
     <th>Importance</th>
+    <th>Bus Factor</th>
     <th></th>
     <th></th>
     <th></th>
+    <th>Add as Specialty</th>
+    <th>Request to follow</th>
   </tr>
 
 <% @items.each do |item| %>
@@ -15,9 +18,12 @@
     <td><%= item.name %></td>
     <td><%= item.description %></td>
     <td><%= item.importance %></td>
+    <td>0</td>
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><button class="btn btn-success">Add</button</td>
+    <td><button class="btn btn-primary">Request</button></td>
   </tr>
 <% end %>
 </table>

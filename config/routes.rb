@@ -8,10 +8,10 @@ BusCalculator::Application.routes.draw do
   end
   root to: 'users#show'
 
- # devise_for :specialties
+  devise_for :specialties
   devise_for :items
   devise_for :users
- # resources :specialties
+  resources :specialties
   resources :items
   resources :users
 
