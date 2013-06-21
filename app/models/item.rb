@@ -7,4 +7,8 @@ class Item < ActiveRecord::Base
   	@busFactor = self.specialties.count;
   end
 
+  def specialty?(user)
+    @specialties = Specialty.where("item_id = ? AND user_id = ?", self.id, user).count
+  end
+
 end

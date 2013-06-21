@@ -22,11 +22,12 @@
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><button class="btn btn-success">Add</button</td>
-    <td><button class="btn btn-primary">Request</button></td>
+    <td><%if item.specialty?(current_user.id) == 0%><button class="btn btn-success">Add</button><%end%></td>
+    <td><%if item.specialty?(current_user.id) == 0%><button class="btn btn-primary">Request</button><%end%></td>
   </tr>
 <% end %>
 </table>
+
 
 <br />
 
