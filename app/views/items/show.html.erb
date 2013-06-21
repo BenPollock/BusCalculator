@@ -20,6 +20,17 @@
 	<%=@item.busFactor %>
 </p>
 
+<p>
+	<b>Users Specializing:</b><br>
+	<% @users = @item.specializers
+	@users.each do |user| %>
+
+	<%=user.email%><br>
+
+
+	<% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
