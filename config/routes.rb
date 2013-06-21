@@ -1,11 +1,18 @@
 BusCalculator::Application.routes.draw do
 
+  resources :specialties
+
+
   authenticated :user do
     root to: 'home#index'
   end
   root to: 'users#show'
 
+ # devise_for :specialties
+  devise_for :items
   devise_for :users
+ # resources :specialties
+  resources :items
   resources :users
 
   # The priority is based upon order of creation:

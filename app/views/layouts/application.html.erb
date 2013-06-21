@@ -26,9 +26,27 @@
         <ul class="nav">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/users">Users</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="/items">Projects</a></li>
           <li><a href="#">Notifications</a></li>
           <li><a href="#">About</a></li>
+          <% if user_signed_in? %>
+		    <li>
+		    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+		    </li>
+		  <% else %>
+		    <li>
+		    <%= link_to 'Login', new_user_session_path %>
+		    </li>
+		  <% end %>
+		  <% if user_signed_in? %>
+		    <li>
+		    <%= link_to 'Edit account', edit_user_registration_path %>
+		    </li>
+		  <% else %>
+		    <li>
+		    <%= link_to 'Sign up', new_user_registration_path %>
+		    </li>
+		  <% end %>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
