@@ -1,3 +1,7 @@
 == Bus Factor Calculator
 
-This application is designed to track the bus factor of each project.  Users can request to shadow a project to ensure information is spread throughout all interested parties.
+*Description*
+
+This application was created for our 'FedEx' day during my employment at GoodLife Fitness.  We are given less than 24 hours to create and demo a quick project that we believe would be an asset to the organization.  Due to time constraints, most features are not implemented but serve to give a view of what the application would do, if given more time.
+
+This application is designed to track the 'bus factor' of each project.  The bus factor is the number of developers that would need to be incapacitated (ie 'hit by a bus') before a project would be rendered useless.  Users can request to shadow a project to ensure information is spread throughout all interested parties.
